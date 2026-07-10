@@ -138,7 +138,7 @@ packages = (
     | pkg("nv-codec-headers")
     | pkg("NVIDIA-VA-API-Driver", key="nvidia-vaapi-driver")
 
-    | pkg("NVIDIA r595", key="nvidia", channel="595")
+    | pkg("NVIDIA r610", key="nvidia", channel="610")
     | pkg("NVIDIA r580", lfs_key="nvidia-r580", vat_key="nvidia", channel="580")
     | pkg("CUDA")
 
@@ -226,7 +226,7 @@ packages = (
     # | pkg("x264", channel="commit") # manual
     | pkg("x265")
     | pkg("FFmpeg")
-    | pkg("GStreamer", lfs_key="gstreamer10")
+    | pkg("GStreamer")
 
     # 23. Wine
     | pkg("Wine")
