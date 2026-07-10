@@ -74,7 +74,7 @@ packages = (
     | pkg("libev")
     | pkg("libime")
     | pkg("libjuice")
-    | pkg("libliftoff")
+    # | pkg("libliftoff") # moved to blfs
     | pkg("libmspack")
     | pkg("libsodium")
     | pkg("libspng")
@@ -87,6 +87,7 @@ packages = (
     | pkg("libXp")
     | pkg("libzip")
     | pkg("libzmq")
+    | pkg("Limine")
     | pkg("Lotus 1-2-3 R3 for Linux", lfs_key="lotus123", vat_key="123elf", channel="unstable")
     | pkg("lrzsz")
     | pkg("m17n-lib", lfs_key="m17n")
@@ -111,7 +112,7 @@ packages = (
     | pkg("ncompress")
     | pkg("neofetch")
     | pkg("NGINX")
-    | pkg("nlohmann-json")
+    # | pkg("nlohmann-json") # moved to blfs
     | pkg("noise-suppression", vat_key="noise-suppression-for-voice")
     | pkg("nvchecker")
     | pkg("OBS-Studio")
@@ -133,6 +134,7 @@ packages = (
     | pkg("ripgrep")
     | pkg("Rofi")
     | pkg("rpmextract")
+    | pkg("RTMPDump")
     | pkg("rubberband")
     | pkg("s-nail")
     | pkg("s4-3b1-pc7300", channel="commit")
@@ -143,7 +145,7 @@ packages = (
     | pkg("SceneFX")
     | pkg("sdl12-compat", lfs_key="sdl")
     | pkg("SDL2_net")
-    | pkg("seatd")
+    # | pkg("seatd") # moved to blfs
     | pkg("Shaderc")
     | pkg("SIMDe")
     | pkg("slurp")
@@ -161,29 +163,29 @@ packages = (
     | pkg("typst")
     | pkg("uthash")
     | pkg("W3m")
-    | pkg("wf-config")
-    | pkg("Wayfire")
-    | pkg("wayfire-plugins-extra")
+    # | pkg("wf-config") # moved to blfs
+    # | pkg("Wayfire") # moved to blfs
+    # | pkg("wayfire-plugins-extra") # moved to blfs
     | pkg("wbg")
     | pkg("websocketpp")
     | pkg("wev")
     | pkg("wgetpaste")
     | pkg("Winetricks")
     | pkg("wlr-randr")
-    | pkg("wlroots")
+    # | pkg("wlroots") # moved to blfs
     | pkg("Wofi")
     | pkg("xcb-imdkit")
-    | pkg("xcb-util-errors")
+    # | pkg("xcb-util-errors") # moved to blfs
     | pkg("xcb-util-xrm")
     | pkg("xdg-desktop-portal-hyprland")
-    | pkg("xdg-desktop-portal-wlr")
+    # | pkg("xdg-desktop-portal-wlr") # moved to blfs
     | pkg("xeyes")
     | pkg("XHomer", vat=data["xhomer"]["release"].replace(".", "-"))
     | pkg("XMLStarlet")
     | pkg("xtrace", channel="commit")
     | pkg("yajl")
     | pkg("yt-dlp")
-    | pkg("yyjson")
+    # | pkg("yyjson") # moved to blfs
     | pkg("zlib")
 )
 
