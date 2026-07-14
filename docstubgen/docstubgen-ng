@@ -51,7 +51,7 @@ is_prog() {
     [ -x "$1" ] || return 1 # file is not executable
     is_lib "$(realpath "$1")" && return 1 # file is a library
     [[ $1 =~ /(doc)/ ]] && return 1 # file is part of documentation
-    [[ $(head -c4 "$1") =~ ELF$|^#!/ ]] # file is a program
+    [[ $(head -c4 "$1") =~ ELF$|^#! ]] # file is a program
 }
 
 
