@@ -86,14 +86,15 @@ packages = (
     | pkg("glib", lfs_key="glib2")
     | pkg("glibmm", lfs_key="glibmm2") # TODO: Handle lfs's glibmm?
     | pkg("gmime", lfs_key="gmime3")
-    # | pkg("gobject-introspection") # TODO: Uncomment
+    | pkg("gmmlib", lfs_key="intel-gmmlib")
+    | pkg("gobject-introspection")
     | pkg("gsl")
     | pkg("gspell")
     | pkg("highway")
     | pkg("icu")
     | pkg("inih")
-    | pkg("gmmlib", lfs_key="intel-gmmlib")
     | pkg("jansson")
+    | pkg("nlohmann-json")
     | pkg("json-c")
     | pkg("json-glib")
     | pkg("keyutils")
@@ -112,14 +113,15 @@ packages = (
     # | pkg("libgrss") # archived
     | pkg("libgsf")
     | pkg("libgudev")
+    | pkg("libgusb")
     | pkg("libical")
     | pkg("libidn")
     | pkg("libidn2")
     # | pkg("libiodbc") # archived
     | pkg("libksba")
     | pkg("liblinear")
-    | pkg("libnvme")
     | pkg("libmbim")
+    | pkg("libnvme")
     | pkg("libpaper")
     | pkg("libportal")
     | pkg("libproxy")
@@ -153,12 +155,15 @@ packages = (
     | pkg("nodejs")
     | pkg("npth")
     | pkg("nspr")
-    | pkg("pcre2")
+    | pkg("opentimeline")
+    # | pkg("pcre2") # moved to lfs
     | pkg("popt")
     | pkg("protobuf")
+    | pkg("protobuf-c")
     # | pkg("pth") # archived
     | pkg("qca")
     | pkg("qcoro")
+    | pkg("rnnoise")
     | pkg("simdutf")
     | pkg("spirv-headers", channel="sdk")
     | pkg("spirv-tools", channel="sdk")
@@ -173,9 +178,10 @@ packages = (
     # | pkg("wpebackend-fdo") # archived
     | pkg("wv")
     | pkg("xapian")
+    | pkg("yyjson")
 
     # 10. Graphics and Font Libraries
-    | pkg("aalib")
+    | pkg("aalib", channel="unstable")
     | pkg("babl")
     | pkg("cargo-c")
     | pkg("exiv2")
@@ -197,13 +203,14 @@ packages = (
     | pkg("libgxps")
     | pkg("libjpeg-turbo")
     | pkg("libjxl")
+    | pkg("libliftoff")
     | pkg("libmng")
     | pkg("libmypaint")
     | pkg("libpng")
     | pkg("libraw")
     | pkg("librsvg")
     | pkg("libspiro")
-    | pkg("libtiff")
+    | pkg("tiff", vat_key="libtiff")
     | pkg("libwebp")
     | pkg("mypaint-brushes")
     | pkg("newt")
@@ -248,6 +255,10 @@ packages = (
     # 23. Other Server Software
 
     # 24. Graphical Environments
+
+    ## Wayland Compositors
+    | pkg("wayfire")
+    | pkg("wayfire-plugins-extra")
 
     # 25. Graphical Environment Libraries
 

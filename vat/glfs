@@ -221,6 +221,7 @@ packages = (
     | pkg("dav1d")
     | pkg("libaom")
     | pkg("fdk-aac")
+    | pkg("mpg123")
     | pkg("LAME")
     | pkg("libvpx")
     # | pkg("x264", channel="commit") # manual
