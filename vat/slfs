@@ -29,6 +29,7 @@ packages = (
     | pkg("Fcitx5-Anthy")
     | pkg("Fcitx5-m17n")
     | pkg("Fcitx5-configtool")
+    | pkg("fd")
     | pkg("fish")
     | pkg("Flatpak")
     | pkg("foot")
@@ -44,6 +45,7 @@ packages = (
     | pkg("heirloom-devtools")
     | pkg("heirloom-doctools", channel="commit")
     | pkg("heirloom-ex-vi", channel="commit")
+    | pkg("Helix")
     | pkg("HIDAPI")
     | pkg("htop")
     | pkg("hwinfo")
@@ -66,6 +68,8 @@ packages = (
     | pkg("intel-onevpl")
     | pkg("inxi", vat=(data["inxi"]["release"][:-2] + "-" + data["inxi"]["release"][-1]))
     | pkg("iputils")
+    | pkg("jaq")
+    | pkg("jemalloc")
     | pkg("jstest-sdl", channel="commit")
     | pkg("ksh")
     | pkg("LADSPA-SDK", vat_key="ladspa")
@@ -102,6 +106,7 @@ packages = (
     | pkg("monero")
     | pkg("Motif")
     | pkg("msgraph")
+    | pkg("Mtools")
     | pkg("mupen64plus-core")
     | pkg("mupen64plus-audio-sdl")
     | pkg("mupen64plus-input-sdl")
@@ -163,6 +168,7 @@ packages = (
     | pkg("typst")
     | pkg("uthash")
     | pkg("W3m")
+    | pkg("Waypipe")
     # | pkg("wf-config") # moved to blfs
     # | pkg("Wayfire") # moved to blfs
     # | pkg("wayfire-plugins-extra") # moved to blfs

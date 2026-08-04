@@ -48,6 +48,7 @@ packages = (
     | pkg("Elfutils")
     | pkg("Libffi")
     | pkg("Sqlite", vat=(f"{data['sqlite']['release'].split('.')[0]}{int(data['sqlite']['release'].split('.')[1]):02d}{int(data['sqlite']['release'].split('.')[2]):02d}00"))
+    | pkg("mpdecimal")
     | pkg("Python")
     | pkg("Flit-Core", vat_key="flit")
     | pkg("Packaging", vat_key="python/packaging")
