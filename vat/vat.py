@@ -18,8 +18,10 @@ args = parser.parse_args()
 match args.book.lower():
     case "slfs":
         packages_ent_link = "https://raw.githubusercontent.com/glfs-book/slfs/trunk/packages.ent"
+        issues_link = "https://api.github.com/repos/glfs-book/slfs/issues"
     case "glfs":
         packages_ent_link = "https://raw.githubusercontent.com/glfs-book/glfs/trunk/packages.ent"
+        issues_link = "https://api.github.com/repos/glfs-book/glfs/issues"
     case "lfs":
         packages_ent_link = "https://raw.githubusercontent.com/lfs-book/lfs/trunk/packages.ent"
     case "blfs":
@@ -28,8 +30,10 @@ match args.book.lower():
         print(f"unknown book: {args.book}")
         exit(1)
 
-content = requests.get(packages_ent_link).text
+packages_ent = requests.get(packages_ent_link).text
 data = json.loads(requests.get("https://raw.githubusercontent.com/tox-wtf/vat/master/p/ALL.json").text)
+if issues_link:
+    issues = json.loads(requests.get(issues_link).text)
 
 def parse_ents(haystack):
     return { k: v for k, v in dict(entity_pattern.findall(haystack)).items() }
@@ -84,7 +88,7 @@ COMPAT_ENTS = {"savannah": "",
                "anduin-sources": "",
               }
 
-ents = parse_ents(content)
+ents = parse_ents(packages_ent)
 lfs_ents = expand_ents(ents | BUILTIN_ENTS | COMPAT_ENTS)
 
 def lfs_ver(lfs_key_full):
@@ -126,4 +130,9 @@ for name, data in packages.items():
         if not args.quiet:
             print(f"{name:<32}{lfs:<12}{vat}")
     else:
-        print(f"{name:<32}{lfs:<12}{vat:<12}{data['flag']}")
+        if issues and any(issue["title"].startswith(f"{name}: {lfs} -> {vat}") for issue in issues):
+            flag = "#"
+        else:
+            flag = data["flag"]
+
+        print(f"{name:<32}{lfs:<12}{vat:<12}{flag}")
