@@ -1,4 +1,4 @@
 # docstubgen-ng
 
-The docstubgen-ng utility generates XML-formatted documentation subts for \*LFS
+The docstubgen-ng utility generates XML-formatted documentation stubs for \*LFS
 packages.
